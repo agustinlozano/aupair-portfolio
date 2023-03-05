@@ -1,0 +1,5 @@
+#welcome-container {
+  height: calc(100vh - 110px);
+  display: grid;
+  place-content: center;
+}
