@@ -22,7 +22,7 @@ export const HiglightTextXl = ({ children, color = 'purple' }) => {
 
 export const Subtitle = ({ children, id }) => {
   return (
-    <h2 id={id} className="text-cyan-500 text-3xl my-16 p-5 font-extrabold text-center drop-shadow-md shadow-blue-600/50 md:text-5xl md:mb-20 hover:text-slate-50">{children}</h2>
+    <h2 id={id} className="text-cyan-500 text-3xl my-16 font-extrabold text-center drop-shadow-md shadow-blue-600/50 md:text-5xl md:mb-20 hover:text-slate-50">{children}</h2>
   )
 }
 
