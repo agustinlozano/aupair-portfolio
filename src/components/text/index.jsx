@@ -4,11 +4,19 @@ export const TextLg = ({ children }) => {
   )
 }
 
-export const TextMd = ({ children, color }) => {
+export const TextMd = ({ children, color, className }) => {
   return (
     color === "dark"
-      ? <h3 className="text-gray-600 text-center text-lg mb-5 inline-block md:text-3xl md:text-center">{children}</h3>
-      : <h3 className="text-gray-400 text-center text-lg mb-5 inline-block md:text-3xl md:text-center lg:text-left">{children}</h3>
+      ? <h3 className={"text-gray-600 text-lg mb-5 inline-block md:text-3xl " + className}>{children}</h3>
+      : <h3 className={"text-gray-400 text-lg mb-5 inline-block md:text-3xl " + className}>{children}</h3>
+  )
+}
+
+export const TextSm = ({ children, color, className }) => {
+  return (
+    color === "dark"
+      ? <p className={"text-gray-600 text-left text-sm block md:text-lg " + className}>{children}</p>
+      : <p className={"text-gray-400 text-left text-sm block md:text-lg " + className}>{children}</p>
   )
 }
 
@@ -22,7 +30,7 @@ export const HiglightTextXl = ({ children, color = 'purple' }) => {
 
 export const Subtitle = ({ children, id }) => {
   return (
-    <h2 id={id} className="text-cyan-500 text-3xl my-16 font-extrabold text-center drop-shadow-md shadow-blue-600/50 md:text-5xl md:mb-20 hover:text-slate-50">{children}</h2>
+    <h2 id={id} className="text-cyan-500 text-3xl my-20 font-extrabold text-center drop-shadow-md shadow-blue-600/50 md:text-5xl md:mb-20 hover:text-slate-50">{children}</h2>
   )
 }
 
