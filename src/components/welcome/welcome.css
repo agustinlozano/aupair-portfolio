@@ -1,5 +1,10 @@
-#welcome-container {
-  height: calc(100vh - 110px);
-  display: grid;
-  place-content: center;
+#welcome {
+  height: calc(90vh - 160px);  
+}
+
+/* media query sm according tailwind */
+@media (min-height: 1024px) {
+  #welcome {
+    height: fit-content;  
+  }
 }
