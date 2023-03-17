@@ -7,9 +7,9 @@ export const LanguageButton = () => {
   return (
     <button
       onClick={toggleLanguage}
-      className="bg-cyan-500 text-slate-200 border-2 border-cyan-400 px-4 py-1 mx-2 rounded-md"
+      className="bg-cyan-500 text-slate-100 border-2 border-cyan-400 px-4 py-1 mx-2 rounded-md"
     >
-      {language}
+      {language === 'english' ? 'EN' : 'ES'}
     </button>
   )
 }
