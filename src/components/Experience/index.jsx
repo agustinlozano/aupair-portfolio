@@ -32,7 +32,7 @@ const Experience = ({children, title, date, location, labels}) => {
   })
 
   return (
-    <div className="grid grid-cols-1 mb-20 gap-4 lg:m-20 lg:grid-cols-8">
+    <section className="grid grid-cols-1 mb-20 gap-4 lg:m-20 lg:grid-cols-8">
       <div className="px-5 lg:col-span-5">
         <TextMd color='dark' className="text-center font-bold">{title}</TextMd>
         <TextSm color='dark' className="mb-2">{date} | 
@@ -50,7 +50,7 @@ const Experience = ({children, title, date, location, labels}) => {
           )}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

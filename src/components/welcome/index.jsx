@@ -14,7 +14,7 @@ const Welcome = () => {
   const { language } = useContext(LanguageContext)
 
   return (
-    <motion.div
+    <motion.section
       id="welcome"
       className="bg-slate-200 grid grid-cols-1 place-content-center gap-4 m-3 rounded-lg shadow-lg sm:mx-20 lg:grid-cols-5 max-lg:pt-14 max-lg:mt-16"
       initial={{ opacity: 0 }}
@@ -42,7 +42,7 @@ const Welcome = () => {
       >
         <Svg svgFile={welcome} style="" />
       </motion.div>
-    </motion.div>
+    </motion.section>
   )
 }
 
