@@ -8,7 +8,12 @@ const DropdownMenu = () => {
   //   if (e.target.id !== 'options-menu') {
   //     setOpen(false);
   //   }
-  // });
+  // })
+
+  const handleClick = (section) => {
+    document.querySelector(section).scrollIntoView({ behavior: 'smooth' });
+    setOpen(false);
+  }
 
   return (
     <div className="relative inline-block text-left">
@@ -33,18 +38,20 @@ const DropdownMenu = () => {
           {/* Menu items */}
             <a
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabIndex="-1" id="options-menu-0"
-              // move to #experience section smoothly
-              onClick={() => {
-                document.querySelector('#experience').scrollIntoView({ behavior: 'smooth' });
-                setOpen(false);
-              }}
+              onClick={() => handleClick('#experience')}
             >
               Experience
             </a>
-            <a className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabIndex="-1" id="options-menu-1">
+            <a
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabIndex="-1" id="options-menu-1"
+              onClick={() => handleClick('#about')}
+            >
               About Me
             </a>
-            <a className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabIndex="-1" id="options-menu-2">
+            <a
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabIndex="-1" id="options-menu-2"
+              onClick={() => handleClick('#contact')}  
+            >
               Contact
             </a>
         </div>

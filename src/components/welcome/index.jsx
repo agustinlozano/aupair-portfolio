@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { motion } from 'framer-motion'
-import { welcomeCnt } from '../../content/'
+import { welcomeCnt } from '../../content'
 import { LanguageContext } from '../../context/multilingual'
 import { HiglightTextXl, TextLg } from '../text'
 import girlJumping from '../../assets/girlJumping.svg'
