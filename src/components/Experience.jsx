@@ -1,10 +1,10 @@
-import { Parap, Subtitle, TextMd, TextSm } from "../text"
-import { experienceCnt } from "../../content/"
-import { shuffleArray } from "../../utils/random"
-import Linker from "../atoms/Linker"
-import Label from "../atoms/Label"
+import { Parap, Subtitle, TextMd, TextSm } from "./text"
+import { experienceCnt } from "../content"
+import { shuffleArray } from "../utils/random"
+import Linker from "./atoms/Linker"
+import Label from "./atoms/Label"
 import { useContext } from "react"
-import { LanguageContext } from "../../context/multilingual"
+import { LanguageContext } from "../context/multilingual"
 
 // an array of tailwind colors
 const colors = [
@@ -32,7 +32,7 @@ const Experience = ({children, title, date, location, labels}) => {
   })
 
   return (
-    <section className="grid grid-cols-1 mb-20 gap-4 lg:m-20 lg:grid-cols-8">
+    <div className="grid grid-cols-1 mb-20 gap-4 lg:m-20 lg:grid-cols-8">
       <div className="px-5 lg:col-span-5">
         <TextMd color='dark' className="text-center font-bold">{title}</TextMd>
         <TextSm color='dark' className="mb-2">{date} | 
@@ -50,7 +50,7 @@ const Experience = ({children, title, date, location, labels}) => {
           )}
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
@@ -58,7 +58,7 @@ const ExperienceContainer = () => {
   const { language } = useContext(LanguageContext)
 
   return (
-    <div id="experience" className="my-32 p-2 border-t sm:p-28 lg:p-6 lg:grid-cols-5 lg:mb-10 lg:mt-28 lg:mx-16">
+    <div id="experience" className="mt-32 p-2 border-t sm:p-28 lg:p-6 lg:grid-cols-5 lg:mb-10 lg:mt-28 lg:mx-16">
       <Subtitle>
         <Linker id="#experience" />
         {experienceCnt[language].title}
