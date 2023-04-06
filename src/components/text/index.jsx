@@ -28,9 +28,36 @@ export const HiglightTextXl = ({ children, color = 'purple' }) => {
   )
 }
 
-export const Subtitle = ({ children, id }) => {
+// build a fourh version of subtitle component based on the third version
+// now the market pen effect have to trigger when the user are scrolling over the subtitle
+export const Subtitle2 = ({ children, id }) => {
+  const [ref, inView] = useInView({
+    threshold: 1,
+    rootMargin: '-1px',
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    console.log(inView);
+  }, [inView])
+
   return (
-    <h2 id={id} className="font-walsheim text-cyan-500 text-6xl my-20 text-center drop-shadow-md shadow-blue-600/50 md:text-8xl md:mb-20 hover:text-slate-50">{children}</h2>
+    <AnimatePresence>
+    { inView &&
+      <h2 id={id} className="w-fit mx-auto font-walsheim text-cyan-500 text-6xl my-20 text-center drop-shadow-md shadow-blue-600/50 md:text-8xl md:mb-20 hover:text-slate-50 z-10">
+        <span className="relative inline-block">
+          <span className="relative">{children}</span>
+              <motion.span
+                ref={ref}
+                initial={{ width: '0%' }}
+                animate={{ width: '100%' }}
+                transition={{ duration: 0.5 }}
+                className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-r opacity-30 from-cyan-500 to-cyan-600 rounded-sm z-0" aria-hidden="true">
+              </motion.span>
+        </span>
+      </h2>
+    }
+    </AnimatePresence>
   )
 }
 

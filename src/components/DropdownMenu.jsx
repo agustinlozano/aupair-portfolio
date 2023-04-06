@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
-const DropdownMenu = () => {
+// first mobile dropdown menu implementation
+const MobileDropdownMenu = () => {
   const [open, setOpen] = useState(false);
 
   // when the user clicks outside the dropdown menu, close it
@@ -60,4 +62,4 @@ const DropdownMenu = () => {
   );
 };
 
-export default DropdownMenu;
+export { MobileDropdownMenu }

@@ -1,10 +1,11 @@
-import { Parap, Subtitle, TextMd, TextSm } from "./text"
+import { Parap, TextMd, TextSm } from "./text"
+import Subtitle from "./text/Subtitle"
 import { experienceCnt } from "../content"
 import { shuffleArray } from "../utils/random"
-import Linker from "./atoms/Linker"
-import Label from "./atoms/Label"
 import { useContext } from "react"
 import { LanguageContext } from "../context/multilingual"
+import Linker from "./atoms/Linker"
+import Label from "./atoms/Label"
 
 // an array of tailwind colors
 const colors = [
@@ -58,7 +59,7 @@ const ExperienceContainer = () => {
   const { language } = useContext(LanguageContext)
 
   return (
-    <div id="experience" className="mt-32 p-2 border-t sm:p-28 lg:p-6 lg:grid-cols-5 lg:mb-10 lg:mt-28 lg:mx-16">
+    <div id="experience" className="mt-32 p-2 border-t-2 sm:p-28 lg:p-6 lg:grid-cols-5 lg:mb-10 lg:mt-28 lg:mx-16">
       <Subtitle>
         <Linker id="#experience" />
         {experienceCnt[language].title}

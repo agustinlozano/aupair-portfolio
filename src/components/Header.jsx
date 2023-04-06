@@ -1,9 +1,8 @@
 import logo from '../assets/logo.svg'
 import Svg from './Svg'
 import { LanguageButton } from './LanguageButton'
-import DropdownMenu from './DropdownMenu'
+import { MobileDropdownMenu } from './DropdownMenu'
 
-// Create a sticky header component that will be used in the App component.
 const Header = () => {
   return (
     <div className="w-100 py-4 sticky top-0 z-50 bg-slate-100 border-b-2 shadow-sm mb-5">
@@ -13,10 +12,9 @@ const Header = () => {
             <Svg svgFile={logo} style="w-14" />
           </a>
         </div>
-        {/* <div className="flex items-center w-fit md:mr-12 lg:mr-12 xl:mr-12"> */}
         <div className="flex items-center w-fit mx-20 max-sm:mx-3">
           <LanguageButton />
-          <DropdownMenu />
+          <MobileDropdownMenu />
         </div>
       </div>
     </div>
