@@ -5,7 +5,7 @@ const Subtitle = ({ children, id }) => {
   return (
     <h2
       id={id}
-      className="w-fit mx-auto font-walsheim text-cyan-500 text-6xl my-20 text-center drop-shadow-md shadow-blue-600/50 md:text-8xl md:mb-20 hover:text-slate-50 z-10"
+      className="w-fit mx-auto font-walsheim text-cyan-500 text-6xl my-20 text-center drop-shadow-md shadow-blue-600/50 md:text-8xl md:mb-20 hover:text-cyan-700 z-10"
     >
       <span className="relative inline-block">
       <span className="relative">{children}</span>
