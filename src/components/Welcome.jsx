@@ -1,13 +1,12 @@
 import { useContext } from 'react'
 import { motion } from 'framer-motion'
-import { welcomeCnt } from '../../content'
-import { LanguageContext } from '../../context/multilingual'
-import { HiglightTextXl, TextLg } from '../text'
-import girlJumping from '../../assets/girlJumping.svg'
-import welcome from '../../assets/welcome.svg'
-import SocialMedia from '../SocialMedia'
-import Svg from "../Svg"
-import './welcome.css'
+import { welcomeCnt } from '../content'
+import { LanguageContext } from '../context/multilingual'
+import { HiglightTextXl, TextLg } from './text'
+import girlJumping from '../assets/girlJumping.svg'
+import welcome from '../assets/welcome.svg'
+import SocialMedia from './SocialMedia'
+import Svg from "./Svg"
 
 const Welcome = () => {
   // use context
@@ -16,12 +15,12 @@ const Welcome = () => {
   return (
     <motion.section
       id="welcome"
-      className="bg-slate-200 grid grid-cols-1 place-content-center gap-4 m-3 rounded-lg shadow-lg sm:mx-20 lg:grid-cols-5 max-lg:pt-14 max-lg:mt-16"
+      className="bg-slate-200 grid grid-cols-1 place-content-center gap-4 mx-3 rounded-lg shadow-lg sm:mx-20 lg:grid-cols-5 max-sm:pt-10 max-lg:pt-14"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className="col-span-1 flex flex-col justify-center px-3 lg:col-span-3">
+      <div className="flex flex-col justify-center px-3 lg:col-span-3">
         <TextLg>{welcomeCnt[language].greeting} <HiglightTextXl color="cyan">Celeste</HiglightTextXl><Svg svgFile={girlJumping} style="w-10 inline-block lg:w-20" /></TextLg>
         <br/>
         <TextLg>{welcomeCnt[language].welcome}</TextLg>
@@ -31,7 +30,7 @@ const Welcome = () => {
         <SocialMedia />
       </div>
       <motion.div
-        className="flex justify-center items-center col-span-1 px-4 lg:col-span-2"
+        className="flex h-fit justify-center items-center px-4 lg:col-span-2"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
