@@ -19,7 +19,7 @@ const AboutMe = () => {
           <Linker id="#about" />
           {aboutCnt[language].title}
         </Subtitle>
-        <div className="grid grid-cols-1 mb-36 gap-4 lg:m-20 lg:grid-cols-5">
+        <div className="grid grid-cols-1 mb-36 gap-4 lg:m-20 lg:grid-cols-5 xl:mx-48">
           <div className="col-span-1 px-5 mb-10 flex items-center lg:col-span-3 lg:mb-0">
             <Parap>
               {aboutCnt[language].introduction}
@@ -29,7 +29,7 @@ const AboutMe = () => {
             <Svg svgFile={introSvg} style="p-5" />
           </div>
         </div>
-        <div className="grid grid-cols-1 mb-36 gap-4 lg:m-20 lg:grid-cols-5">
+        <div className="grid grid-cols-1 mb-36 gap-4 lg:m-20 lg:grid-cols-5 xl:mx-48">
           <div className="col-span-1 px-5 mb-10 flex items-center lg:col-span-3 lg:mb-0">
             <Parap className="text-center text-lg text-gray-700">
               {aboutCnt[language].hobbies}
@@ -39,7 +39,7 @@ const AboutMe = () => {
             <Svg svgFile={cookingSvg} style="p-5" />
           </div>
         </div>
-        <div className="grid grid-cols-1 mb-36 gap-4 lg:m-20 lg:grid-cols-5">
+        <div className="grid grid-cols-1 mb-36 gap-4 lg:m-20 lg:grid-cols-5 xl:mx-48">
           <div className="col-span-1 px-5 mb-10 flex items-center lg:col-span-3 lg:mb-0">
             <Parap>
               {aboutCnt[language].goals}
@@ -49,7 +49,7 @@ const AboutMe = () => {
             <Svg svgFile={goalSvg} style="p-5" />
           </div>
         </div>
-        <div className="grid grid-cols-1 mb-36 gap-4 lg:m-20 lg:grid-cols-5">
+        <div className="grid grid-cols-1 mb-36 gap-4 lg:m-20 lg:grid-cols-5 xl:mx-48">
           <div className="col-span-1 px-5 mb-10 flex items-center lg:col-span-3 lg:mb-0">
             <Parap>
               {aboutCnt[language].motivations}
